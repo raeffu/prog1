@@ -31,7 +31,7 @@ public class CashRegister
    public void recordPurchase(double amount)
    {
       purchase = purchase + amount;
-      Logger.getGlobal().info("amount=" + amount);
+      Logger.getAnonymousLogger().info("amount=" + amount);
    }
    
    /**
