@@ -14,6 +14,7 @@ public class MyBankAccountTester {
    */
   public static void main(String[] args) {
     BankAccount testAccount = new BankAccount();
+    BankAccount testAccount2 = new BankAccount();
     
     System.out.println(testAccount);
     
@@ -24,6 +25,9 @@ public class MyBankAccountTester {
     testAccount.withdraw(25);
     System.out.println(testAccount.getBalance());
     System.out.println("Excepted: 25");
+    
+    System.out.println(testAccount.getAccountNumber());
+    System.out.println(testAccount2.getAccountNumber());
     
     System.out.println(testAccount);
   }
