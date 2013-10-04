@@ -1,7 +1,6 @@
-/**
- * 
- */
-package ch02.account;
+package ch02._excercise;
+
+import ch02.account.BankAccount;
 
 /**
  * @author lar02
