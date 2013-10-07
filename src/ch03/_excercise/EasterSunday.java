@@ -23,7 +23,7 @@ public class EasterSunday {
     int month = (h - m + r + 90) / 25;
     int day = (h - m + r + month + 19) % 32;
     
-    return day + "." + Month.getMonth(month) + "." + y;
+    return day + " " + Month.getMonth(month) + " " + y;
   }
 
 }
