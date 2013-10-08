@@ -3,7 +3,6 @@ package ch03._excercise;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.geom.Line2D;
-import java.awt.geom.Line2D.Double;
 import java.awt.geom.Point2D;
 
 /**
