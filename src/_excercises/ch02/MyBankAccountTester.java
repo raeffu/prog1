@@ -1,4 +1,4 @@
-package ch02._excercise;
+package _excercises.ch02;
 
 import ch02.account.BankAccount;
 

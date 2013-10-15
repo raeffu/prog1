@@ -1,4 +1,4 @@
-package ch03._excercise;
+package _excercises.ch03;
 
 //import ch03._excercise.Month;
 
