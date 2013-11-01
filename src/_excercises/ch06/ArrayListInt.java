@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ArrayListInt {
 
   private int[] array;
-  private int size;
+  private int size; // number of filled in values
 
   /*
    * Constructor
@@ -31,11 +31,15 @@ public class ArrayListInt {
     array[index] = element;
   }
 
+  public int getSize() {
+    return size;
+  }
+
   public void add(int element) {
     if (size >= array.length) {
       this.grow();
     }
-    
+
     array[size] = element;
     size++;
   }
@@ -43,21 +47,26 @@ public class ArrayListInt {
   public void insert(int index, int element) {
     for (int i = size; i > index; i--) {
       if (i == size) {
-        this.add(array[i-1]);
+        this.add(array[i - 1]);
+      } else {
+        array[i] = array[i - 1];
       }
-      else {
-        array[i] = array[i-1];
-      }
+    }
+
+    if (index >= size) {
+      this.add(element);
+    } else {
+      array[index] = element;
     }
   }
 
   public void remove(int index) {
     if (index < size) {
-      array[index] = array[size-1];
+      array[index] = array[size - 1];
       size--;
     }
-    
-    if (array.length/size >= 2) {
+
+    if (array.length / size >= 2) {
       this.shrink();
     }
   }
@@ -67,10 +76,10 @@ public class ArrayListInt {
     for (int element : array) {
       values += element + ", ";
     }
-    
+
     // remove last ", "
-    values = values.substring(0, values.length()-2);
-    
+    values = values.substring(0, values.length() - 2);
+
     return "[" + values + "]";
   }
 
