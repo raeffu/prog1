@@ -18,7 +18,7 @@ public class Die
    public Die(int s)
    {
       sides = s;
-      generator = new Random();
+      generator = new Random(0);
    }
 
    /**
