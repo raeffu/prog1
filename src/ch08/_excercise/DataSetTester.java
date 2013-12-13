@@ -32,22 +32,29 @@ public class DataSetTester
     Measurer mR = new RectangleMeasurer();
     Measurer mS = new StringMeasurer();
 
-    DataSet data = new DataSet();
+    DataSet dataR = new DataSet();
+    DataSet dataS = new DataSet();
 
-    data.add(mR, new Rectangle(5, 10, 20, 30));
-    data.add(mR, new Rectangle(10, 20, 30, 40));
-    data.add(mR, new Rectangle(20, 30, 5, 15));
+    dataR.add(mR, new Rectangle(5, 10, 20, 30));
+    dataR.add(mR, new Rectangle(5, 10, 40, 20));
+    dataR.add(mR, new Rectangle(10, 20, 30, 40));
+    dataR.add(mR, new Rectangle(20, 30, 5, 15));
     
-    data.add(mS, "1d");
-    data.add(mS, "abc");
-    data.add(mS, "a");
+    dataS.add(mS, "1d");
+    dataS.add(mS, "abc");
+    dataS.add(mS, "a");
+    dataS.add(mS, "aaaa");
 
-    System.out.println("Average area: " + data.getAverage());
-//    System.out.println("Expected: 625");
-
-//    Rectangle max = (Rectangle) data.getMaximum();
-//    System.out.println("Maximum area rectangle: " + max);
-//    System.out.println("Expected: "
-//        + "java.awt.Rectangle[x=10,y=20,width=30,height=40]");
+//  Rectangle
+    System.out.println("Average area: " + dataR.getAverage());
+    System.out.println("Maximum area rectangle: " + dataR.getMaximum());
+    System.out.println("Minimum area rectangle: " + dataR.getMinimum());
+    System.out.println("Median area rectangle: " + dataR.getMedian());
+    
+//  String
+    System.out.println("Average string length: " + dataS.getAverage());
+    System.out.println("Maximum string length: " + dataS.getMaximum());
+    System.out.println("Minimum string length: " + dataS.getMinimum());
+    System.out.println("Median string length: " + dataS.getMedian());
   }
 }
