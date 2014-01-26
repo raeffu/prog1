@@ -1,4 +1,4 @@
-package ch08._excercise;
+package _excercises.ch08;
 
 import java.util.ArrayList;
 
